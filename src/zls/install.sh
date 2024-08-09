@@ -29,7 +29,7 @@ check_packages() {
 check_packages ca-certificates curl xz-utils jq
 
 # remove any old version
-rm /usr/local/bin/zls
+rm -f /usr/local/bin/zls
 rm -rf /usr/local/lib/zls
 mkdir /usr/local/lib/zls
 
