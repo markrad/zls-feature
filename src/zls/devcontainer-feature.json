@@ -1,0 +1,18 @@
+{
+    "name": "Zig Language Server (via ziglang.org)",
+    "id": "zls",
+    "version": "1.0.0",
+    "description": "ZLS is used for live syntax checking of the zig source code. It is invoked by the zig vscode extension.",
+    // "documentationURL": "https://github.com/devcontainers-contrib/features/tree/main/src/zig",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "0.13.0"
+            ],
+            "default": "latest",
+            "description": "Select the ZLS version you would like to install. This MUST match the zig version you have installed."
+        }
+    }
+}
