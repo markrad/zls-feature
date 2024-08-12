@@ -3,9 +3,10 @@ MQTTC_VERSION=v1.1.6
 set -e
 
 if [ "$(id -u)" -ne 0 ]; then
-	echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
+	echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.' >&2
 	exit 1
 fi
+
 
 # Clean up (?)
 # rm -rf /var/lib/apt/lists/*
@@ -35,7 +36,7 @@ else
     HAVE_VERSION=$(curl -sSL $INDEX_URL | jq -r --arg VER "$MQTTC_VERSION" '[ .[].tag_name ] | index($VER)')
     if [[ "$HAVE_VERSION" == "null" ]]
     then
-        echo -e "Requested version $MQTTC_VERSION does not exist"
+        echo -e "Requested version $MQTTC_VERSION does not exist" >&2
 	    exit 1
     fi
 
