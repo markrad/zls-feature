@@ -1,0 +1,17 @@
+{
+    "name": "MQTT library",
+    "id": "MQTT-C",
+    "version": "1.0.0",
+    "description": "A compact easy to use MQTT client library.",
+    "documentationURL": "https://github.com/LiamBindle/MQTT-C",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "Select the tag version you would like to install or latest."
+        }
+    }
+}
